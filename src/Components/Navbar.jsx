@@ -15,7 +15,7 @@ function Navbar() {
           ShopSphere
         </Link>
 
-        {/* Hamburger Button (Mobile) */}
+        {/* Button (Mobile) */}
         <button
           className="md:hidden text-2xl"
           onClick={() => setIsOpen(!isOpen)}
