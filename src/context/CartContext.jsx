@@ -24,7 +24,7 @@ export function CartProvider({ children }) {
     });
   };
 
-  // REMOVE ONE ITEM
+  // remove items
   const removeFromCart = (id) => {
     setCart(prevCart =>
       prevCart

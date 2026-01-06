@@ -10,12 +10,12 @@ function Navbar() {
     <nav className="sticky top-0 z-50 bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         
-        {/* Logo */}
+        {/* logo */}
         <Link to="/" className="text-2xl font-bold text-blue-600">
           ShopSphere
         </Link>
 
-        {/* Button (Mobile) */}
+        {/* button mobile */}
         <button
           className="md:hidden text-2xl"
           onClick={() => setIsOpen(!isOpen)}
@@ -23,7 +23,7 @@ function Navbar() {
           ☰
         </button>
 
-        {/* Links */}
+        {/* links */}
         <div
           className={`
             absolute md:static top-16 left-0 w-full md:w-auto
