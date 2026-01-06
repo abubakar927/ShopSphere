@@ -37,7 +37,8 @@ function ProductList() {
         {filteredProducts.map(product => (
           <div
             key={product.id}
-            className="border border-gray-400 rounded-lg p-4 shadow transform hover:scale-105 hover:shadow-2xl transition-all duration-300 flex flex-col"
+            className="border border-gray-400 rounded-lg p-4 shadow transform hover:scale-105
+                       hover:shadow-2xl transition-all duration-300 flex flex-col"
             
           >
             <img
