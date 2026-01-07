@@ -4,7 +4,6 @@ const CartContext = createContext();
 
 export function CartProvider({ children }) {
 
-  //SAFE localStorage read
   const [cart, setCart] = useState(() => {
     try {
       const savedCart = localStorage.getItem("cart");
@@ -12,7 +11,7 @@ export function CartProvider({ children }) {
 
       const parsed = JSON.parse(savedCart);
 
-      // verify that old quantity exists
+      // verifies that old quantity exists
       return parsed.map(item => ({
         ...item,
         quantity: item.quantity ?? 1,
