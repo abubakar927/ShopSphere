@@ -44,7 +44,10 @@ function ProductDetails() {
 
       <div className="flex gap-4">
         <button
-          onClick={() => addToCart(product)}
+          onClick={() => {
+            addToCart(product);
+            alert("Item Added to Cart");
+          }}
           className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
         >
           Add to Cart
