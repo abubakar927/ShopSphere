@@ -1,10 +1,14 @@
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 export default function Layout({ children }) {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="pt-4">{children}</main>
+      <main className="flex-grow pt-4">
+        {children}
+      </main>
+      <Footer />
     </div>
   );
 }
