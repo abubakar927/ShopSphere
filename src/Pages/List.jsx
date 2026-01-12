@@ -5,11 +5,19 @@ function ProductList() {
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
 
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then(res => res.json())
-      .then(data => setProducts(data));
-  }, []);
+  const fetchProducts = async () => {
+  try {
+    const res = await fetch("https://fakestoreapi.com/products");
+    const data = await res.json();
+    setProducts(data);
+  } catch (error) {
+    console.error("error", error);
+  }
+};
+
+useEffect(() => {
+  fetchProducts();
+}, []);
 
   const filteredProducts = useMemo(() => {
     return products.filter(product =>
